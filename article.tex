@@ -1,15 +1,14 @@
+%General Article document tex file
 \documentclass[a4paper,12pt]{article}
-\usepackage{titlesec}
-%Setting the margins 
+\usepackage{sectsty}
+%Use Secsty package to enable sectionformatting
+%Margin formatting below
 \usepackage[margin=2cm]{geometry}
-%Changing the Sections
-\titleformat{\section}
-{\huge \bfseries}
-{}
-{0cm}
-{}[\titlerule]
-%No page numbering
-\pagenumbering{gobble}
+%Enable Times New Roman as the Global Font
+\renewcommand{\familydefault}{\rmdefault} 
+%Configuring Section style
+\sectionfont{\Large \normalfont  \centering \underline}
 \begin{document}
-\section{Enter Title Here}
+\section*{ Insert Title Here  }
+Write here in Times New Roman
 \end{document}
