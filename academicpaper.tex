@@ -1,0 +1,54 @@
+\documentclass[a4paper,12pt]{article}
+%Using the titlesec packages to edit the title
+\usepackage{titlesec,amsmath,amsfonts}
+%Setting the margins 
+\usepackage[margin=2cm]{geometry}
+% Custom headers and Footers
+\usepackage{fancyhdr}
+\newcommand{\mathfoot}[2][Math Notes Template]{  % Function that defines the footers and headers of each page
+	\pagestyle{fancy}
+	\fancyhf{}
+	\rhead{#1}
+	\lhead{#2}
+	\renewcommand{\footrulewidth}{1pt}
+	\cfoot{\thepage}
+	}
+
+% Created a new command above to create custom headers and footers
+\begin{document}
+% Title Page Initialistation, note that the title page is a stand alone page
+
+\begin{titlepage}
+\begin{center}
+	{\Huge \scshape \bfseries Insert Title Here}\\
+	\vspace{0.5cm}
+	{\large \scshape Insert Author here}\\
+	\vspace{0.5cm}
+	{\large \today}\\
+	\vspace{1cm}
+	{\large \bfseries Abstract}\\
+	\vspace{0.5cm}
+	Insert abstract here
+\end{center}
+\end{titlepage}
+
+% Table of content page
+\pagenumbering{gobble}
+\mathfoot{Table of Contents}
+
+\tableofcontents
+\newpage
+
+
+
+
+
+\mathfoot{The first section}
+\pagenumbering{arabic}
+\section{Enter Title Here}
+\newpage
+hello
+\newpage
+\mathfoot{The second section}
+\section{Another Title}
+\end{document}
