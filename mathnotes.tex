@@ -1,0 +1,24 @@
+\documentclass[a4paper,12pt]{article}
+%Using the titlesec packages to edit the title
+\usepackage{titlesec,amsmath,amsfonts}
+%Setting the margins 
+\usepackage[margin=2cm]{geometry}
+% Custom headers and Footers
+\usepackage{fancyhdr}
+\newcommand{\mathfoot}[1]{
+	\pagestyle{fancy}
+	\fancyhf{}
+	\rhead{Math Notes Template}
+	\lhead{#1}
+	\renewcommand{\footrulewidth}{1pt}
+	\cfoot{\thepage}
+	}
+
+% Created a new command above to create custom headers and footers
+\begin{document}
+\mathfoot{The first section}
+\section{Enter Title Here}
+\newpage
+\mathfoot{The second section}
+\section{Another Title}
+\end{document}
